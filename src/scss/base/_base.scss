@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include mg(large) {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 85%;
+  max-width: 1200px;
+  min-height: 35rem;
+  margin: 5rem auto;
+  padding: 5rem 10rem;
+  background-image: linear-gradient(to top right, $color-gradient-one, $color-gradient-two);
+  border-radius: 5px;
+  box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.4);
+  position: relative;
+
+  @include mg(large) {
+    width: 95%;
+    margin: 2rem auto;
+    border-radius: 0;
+  }
+
+  @include mg(medium) {
+    padding: 4rem;
+  }
+}
+
+.loader {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.loader {
+  margin: 60px auto;
+  position: relative;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #ffffff;
+  transform: translateZ(0);
+  animation: load8 1.1s infinite linear;
+}
+
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

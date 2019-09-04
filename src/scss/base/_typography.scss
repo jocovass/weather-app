@@ -1,0 +1,52 @@
+body {
+  font-family: 'Livvic', sans-serif;
+  color: $color-primary;
+  background-color: $color-background;
+}
+
+.heading-primary {
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+}
+
+.search {
+  &__input {
+    font-size: 1.6rem;
+    color: inherit;
+  }
+
+  .error {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $color-error;
+  }
+}
+
+.weather {
+  .current-weather {
+    &__temp,
+    &__cloud {
+      font-size: 2rem;
+      text-transform: capitalize;
+    }
+  }
+}
+.forecast {
+  font-weight: 600;
+  &__date {
+    font-size: 2rem;
+  }
+
+  &__img {
+    width: 10rem;
+    height: auto;
+  }
+
+  &__temp {
+    font-size: 1.5rem;
+  }
+}

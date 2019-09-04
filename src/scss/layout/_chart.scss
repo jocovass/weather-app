@@ -1,0 +1,20 @@
+.chart {
+  &-container {
+    @include mg(small) {
+      display: none;
+    }
+
+    position: relative;
+    width: 66vw;
+    height: 35vw;
+    margin: 0 auto;
+  }
+
+  &-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
