@@ -19,7 +19,7 @@ import renderChart from './views/chartView';
 import Search from './models/Search';
 import { displayError } from './views/errorView';
 
-const Chart = function() {
+const Chart = function Chart() {
   return import('./models/Chart');
 };
 let MyChart = null;

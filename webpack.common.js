@@ -7,7 +7,7 @@ const Dotenv = require('dotenv-webpack');
 module.exports = {
   entry: ['@babel/polyfill', './src/js/app.js'],
   output: {
-    path: path.resolve(__dirname, 'docs'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     chunkFilename: '[id].js',
   },
