@@ -8,7 +8,7 @@ export default class Search {
 
   getWeather() {
     return axios.get(
-      `${process.env.PROXY}api.openweathermap.org/data/2.5/weather?q=${this.city}&units=metric&APPID=${process.env.APIKEY}`,
+      `${process.env.NODE_ENV_PROXY}api.openweathermap.org/data/2.5/weather?q=${this.city}&units=metric&APPID=${process.env.NODE_ENV_APIKEY}`,
     );
   }
 
