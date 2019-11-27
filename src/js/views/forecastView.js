@@ -40,8 +40,10 @@ const forecastMarkup = (key, value) => {
 
   return `
         <div class="forecast__day" data-day="${key}">
-            <p class="forecast__date">${value.date}</p>
-            <img class="forecast__img" src="img/${icon}d.png" alt="" />
+            <div class="forecast__desc">
+              <p class="forecast__date">${value.date}</p>
+              <img class="forecast__img" src="img/${icon}d.png" alt="" />
+            </div>
             <div class="forecast__temp">
                 <p class="forecast__temp--day">
                     ${Math.ceil(temp[temp.length - 1].temp)}°C

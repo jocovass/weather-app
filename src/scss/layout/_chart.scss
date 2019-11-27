@@ -1,13 +1,18 @@
 .chart {
   &-container {
-    @include mg(small) {
-      display: none;
-    }
-
     position: relative;
     width: 66vw;
     height: 35vw;
     margin: 0 auto;
+
+    @include mq(tab) {
+      width: 85vw;
+      height: 45vw;
+    }
+
+    @include mq(phone) {
+      display: none;
+    }
   }
 
   &-wrapper {

@@ -77,9 +77,9 @@ const currentController = async () => {
     state.current = new Current(coords);
     const currentResp = await errorHandler(state.current.getWeather)();
     const currentWeather = state.current.setCurrentWeather(currentResp);
-    clearLoader();
     populateUI(currentWeather);
   }
+  clearLoader();
 };
 
 // search controller
@@ -93,9 +93,12 @@ const searchController = async event => {
     // 2. Get the current waether
     state.search = new Search(input);
     const currentResp = await errorHandler(state.search.getWeather)();
-    const currentWeather = state.search.setCurrentWeather(currentResp);
+    if (currentResp) {
+      // eslint-disable-next-line no-var, vars-on-top
+      var currentWeather = state.search.setCurrentWeather(currentResp);
+      populateUI(currentWeather);
+    }
     clearLoader();
-    populateUI(currentWeather);
     clearInput();
   } else {
     displayError('Please enter a valid city name!');

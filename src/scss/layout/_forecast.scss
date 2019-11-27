@@ -1,8 +1,8 @@
 .forecast {
   display: flex;
   margin-bottom: 6rem;
-  overflow-x: scroll;
-  scrollbar-width: none;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 
   &__day {
     min-width: 18rem;
@@ -11,7 +11,7 @@
     background-color: rgba($color-primary, 0.2);
     padding: 10px 5px;
     border-radius: 5px;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
 
     cursor: pointer;
 
@@ -46,6 +46,40 @@
       background-color: #525252;
       padding: 0.8rem 1.6rem;
       border-radius: 3px;
+    }
+  }
+
+  @include mq(large) {
+    flex-direction: column;
+
+    &__day {
+      width: 70%;
+      margin: 0 auto 1rem auto;
+      padding: 10px 5rem;
+      text-align: unset;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__temp {
+      flex-direction: column;
+
+      &--day {
+        margin-bottom: 5px;
+      }
+    }
+
+    &__img {
+      margin: 0;
+    }
+  }
+
+  @include mq(phone) {
+    margin-bottom: 0;
+
+    &__day {
+      width: 100%;
     }
   }
 }

@@ -4,7 +4,7 @@
   right: 5rem;
   width: 35rem;
 
-  @include mg(medium) {
+  @include mq(tab) {
     position: relative;
     top: 0;
     right: 0;
@@ -23,6 +23,7 @@
 
   &__input {
     background-color: transparent;
+    outline: none;
     border: none;
     margin: 0 6px;
     width: 85%;

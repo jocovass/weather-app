@@ -1,7 +1,7 @@
 .weather {
   padding: 2rem 0;
 
-  @include mg(medium) {
+  @include mq(tab) {
     text-align: center;
   }
 
@@ -18,7 +18,7 @@
       display: flex;
       align-items: center;
 
-      @include mg(medium) {
+      @include mq(tab) {
         justify-content: center;
       }
     }

@@ -1,10 +1,11 @@
 $breakpoints: (
-  large: 62.5em,
-  medium: 47em,
-  small: 37.5em,
+  large: 81.5em,
+  tabLand: 62.5em,
+  tab: 47em,
+  phone: 37.5em,
 );
 
-@mixin mg($size) {
+@mixin mq($size) {
   $breakpoint: map-get($breakpoints, $size);
 
   @media only screen and (max-width: $breakpoint) {

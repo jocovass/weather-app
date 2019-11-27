@@ -12,6 +12,10 @@ export const elements = {
 
 export const setLoader = () => {
   const markup = `<div class="loader"></div>`;
+  const prevLoader = document.querySelector(elements.loader);
+  if (prevLoader) {
+    prevLoader.parentElement.removeChild(prevLoader);
+  }
 
   document.querySelector(elements.container).insertAdjacentHTML('beforeend', markup);
 };
