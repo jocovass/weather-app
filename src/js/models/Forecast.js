@@ -83,7 +83,7 @@ export default class Forecast {
 
   getForecast() {
     return axios.get(
-      `${process.env.NODE_ENV_PROXY}api.openweathermap.org/data/2.5/forecast?q=${this.city}&units=metric&APPID=${process.env.NODE_ENV_APIKEY}`,
+      `https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/forecast?q=${this.city}&units=metric&APPID=b276f410326feb1797d9d96f457c4e50`,
     );
   }
 
