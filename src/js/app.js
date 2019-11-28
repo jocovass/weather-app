@@ -76,8 +76,10 @@ const currentController = async () => {
     };
     state.current = new Current(coords);
     const currentResp = await errorHandler(state.current.getWeather)();
-    const currentWeather = state.current.setCurrentWeather(currentResp);
-    populateUI(currentWeather);
+    if (currentResp) {
+      const currentWeather = state.current.setCurrentWeather(currentResp);
+      populateUI(currentWeather);
+    }
   }
   clearLoader();
 };
@@ -141,6 +143,6 @@ document.querySelector(elements.container).addEventListener('click', e => {
   }
 
   if (e.target.closest('div.forecast__day')) {
-    smoothScrolling(elements.forecastDiv, 400);
+    smoothScrolling(elements.chart, 400);
   }
 });

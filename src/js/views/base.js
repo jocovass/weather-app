@@ -8,6 +8,7 @@ export const elements = {
   input: '.search__input',
   container: '.container',
   loader: '.loader',
+  chart: 'myChart',
 };
 
 export const setLoader = () => {
@@ -36,7 +37,7 @@ export const clearInput = () => {
 
 export const smoothScrolling = (target, duration) => {
   const elementTarget = document.querySelector(target);
-  const targetPosition = elementTarget.getBoundingClientRect().top;
+  const targetPosition = elementTarget.getBoundingClientRect().top || window.pageYOffset;
   const startPosition = window.pageYOffset;
   const easeInCubic = num => num * num * num;
 

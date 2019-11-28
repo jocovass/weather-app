@@ -8,7 +8,7 @@ export default class Current {
 
   getWeather() {
     return axios.get(
-      `${process.env.PROXY}api.openweathermap.org/data/2.5/weather?lat=${this.coords.lat}&lon=${this.coords.long}&units=metric&APPID=${process.env.APIKEY}`,
+      `https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?lat=${this.coords.lat}&lon=${this.coords.long}&units=metric&APPID=${process.env.APIKEY}`,
     );
   }
 

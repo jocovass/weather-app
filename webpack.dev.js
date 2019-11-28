@@ -6,7 +6,7 @@ module.exports = merge(webpackCommon, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './docs',
+    contentBase: './dist',
     hot: true,
   },
   resolve: {
