@@ -4,7 +4,7 @@
   "description": "Weather application",
   "main": "index.js",
   "scripts": {
-    "build": "node ./scripts/create-env.js && webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js",
     "start": "webpack-dev-server --open --config webpack.dev.js"
   },
   "repository": {
