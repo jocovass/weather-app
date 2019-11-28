@@ -34,9 +34,7 @@ const populateUI = async currentWeather => {
   // 2. With the location name fetch the forecast and update the UI
   state.forecast = new Forecast(currentWeather.name);
   const forecastResp = await errorHandler(state.forecast.getForecast)();
-  console.log(forecastResp);
   const forecasts = state.forecast.setForecast(forecastResp);
-  console.log(forecasts);
   const forecastActive = renderForecasts(forecasts);
   // 3. Draw the graph with the forecast
   if (!MyChart) {

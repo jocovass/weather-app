@@ -8,7 +8,7 @@ export const elements = {
   input: '.search__input',
   container: '.container',
   loader: '.loader',
-  chart: 'myChart',
+  chart: '.chart-container',
 };
 
 export const setLoader = () => {
@@ -51,7 +51,6 @@ export const smoothScrolling = (target, duration) => {
     const gotTo = startPosition + targetPosition * easeInCubic(progress);
 
     window.scrollTo(0, gotTo);
-    console.log(runTime);
     if (runTime < duration) {
       requestAnimationFrame(animation);
     }

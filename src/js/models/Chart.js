@@ -67,10 +67,8 @@ export default class MyChart {
           title: function(title) {
             return title.text;
           },
-          label: function(tooltipItem, data, dataset) {
-            // console.log(data);
-            // console.log(tooltipItem);
-            // console.log(dataset);
+          label: function(tooltipItem) {
+            // , data, dataset
             const label = `Temperature: ${tooltipItem.value}°C`;
             return label;
           },
