@@ -1,13 +1,13 @@
 .chart {
   &-container {
     position: relative;
-    width: 66vw;
     height: 35vw;
+    max-height: 565px;
     margin: 0 auto;
 
     @include mq(tab) {
+      height: 42vw;
       width: 85vw;
-      height: 45vw;
     }
 
     @include mq(phone) {
